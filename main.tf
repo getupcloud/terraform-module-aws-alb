@@ -19,13 +19,3 @@ module "irsa_aws_AWSLoadBalancerController" {
   role_policy_arns              = [aws_iam_policy.aws_AWSLoadBalancerController.arn]
   oidc_fully_qualified_subjects = ["system:serviceaccount:${var.service_account_namespace}:${var.service_account_name}"]
 }
-
-resource "aws_s3_bucket" "aws_AWSLoadBalancerController" {
-  bucket = "${var.customer_name}-eks-AWSLoadBalancerController"
-  acl    = "private"
-
-  tags = merge({
-    Name = "${var.cluster_name}"
-    }, var.tags
-  )
-}
