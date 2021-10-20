@@ -5,7 +5,7 @@ locals {
 resource "aws_iam_policy" "aws_AWSLoadBalancerController" {
   name        = local.name_prefix
   description = "AWSLoadBalancerController policy for EKS cluster ${var.cluster_name}"
-  policy      = file("policy.json")
+  policy      = file("${path.module}/policy.json")
 }
 
 
