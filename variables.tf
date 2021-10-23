@@ -14,12 +14,12 @@ variable "cluster_oidc_issuer_url" {
 
 variable "service_account_namespace" {
   description = "Namespace of ServiceAccount for cluster-autoscaler controller"
-  default     = "velero"
+  default     = "kube-system"
 }
 
 variable "service_account_name" {
   description = "ServiceAccount name for cluster-autoscaler controller"
-  default     = "eks-infra-velero"
+  default     = "eks-infra-AWSLoadBalancerController"
 }
 variable "tags" {
   description = "AWS tags to apply to resources"
