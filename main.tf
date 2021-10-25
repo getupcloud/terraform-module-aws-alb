@@ -1,5 +1,5 @@
 locals {
-  name_prefix = substr("${var.cluster_name}-AWSALBController", 0, 32)
+  name_prefix = substr("${var.cluster_name}-awsalbcontroller", 0, 32)
 }
 
 resource "aws_iam_policy" "aws_AWSLoadBalancerController" {
