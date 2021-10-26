@@ -19,7 +19,7 @@ variable "service_account_namespace" {
 
 variable "service_account_name" {
   description = "ServiceAccount name for alb controller"
-  default     = "eks-infra-albcontroller"
+  default     = "eks-infra-cluster-autoscaler"
 }
 variable "tags" {
   description = "AWS tags to apply to resources"
