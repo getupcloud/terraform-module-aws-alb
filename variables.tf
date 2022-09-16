@@ -19,7 +19,7 @@ variable "service_account_namespace" {
 
 variable "service_account_name" {
   description = "ServiceAccount name for alb controller"
-  default     = "alb"
+  default     = "aws-load-balancer-controller"
 }
 variable "tags" {
   description = "AWS tags to apply to resources"
